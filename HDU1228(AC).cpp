@@ -9,36 +9,35 @@ map<string, int> mm;
 
 int main()
 {
-    string str;
+	string str;
 
-    mm.clear();
-    mm["zero"] = 0;
-    mm["one"] = 1;
-    mm["two"] = 2;
-    mm["three"] = 3;
-    mm["four"] = 4;
-    mm["five"] = 5;
-    mm["six"] = 6;
-    mm["seven"] = 7;
-    mm["eight"] = 8;
-    mm["nine"] = 9;
+	mm.clear();
+	mm["zero"] = 0;
+	mm["one"] = 1;
+	mm["two"] = 2;
+	mm["three"] = 3;
+	mm["four"] = 4;
+	mm["five"] = 5;
+	mm["six"] = 6;
+	mm["seven"] = 7;
+	mm["eight"] = 8;
+	mm["nine"] = 9;
 
-    while(cin >> str){
-        a = b = 0;
-        a = mm[str];
-        while(cin >> str && str != "+"){
-            a = a * 10 + mm[str];
-        }
-        while(cin >> str && str != "="){
-            b = b * 10 + mm[str];
-        }
-        if(a || b){
-            cout << a + b << endl;
-        }else{
-            break;
-        }
-    }
+	while(cin >> str){
+		a = b = 0;
+		a = mm[str];
+		while(cin >> str && str != "+"){
+			a = a * 10 + mm[str];
+		}
+		while(cin >> str && str != "="){
+			b = b * 10 + mm[str];
+		}
+		if(a || b){
+			cout << a + b << endl;
+		}else{
+			break;
+		}
+	}
 
-    return 0;
+	return 0;
 }
-

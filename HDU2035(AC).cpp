@@ -5,18 +5,17 @@ using namespace std;
 
 int main()
 {
-    int a, b;
-    int res;
-    int i;
+	int a, b;
+	int res;
+	int i;
 
-    while(scanf("%d%d", &a, &b) == 2 && (a || b)){
-        res = 1;
-        for(i = 1; i <= b; ++i){
-            res = res * a % 1000;
-        }
-        printf("%d\n", res);
-    }
+	while(scanf("%d%d", &a, &b) == 2 && (a || b)){
+		res = 1;
+		for(i = 1; i <= b; ++i){
+			res = res * a % 1000;
+		}
+		printf("%d\n", res);
+	}
 
-    return 0;
+	return 0;
 }
-

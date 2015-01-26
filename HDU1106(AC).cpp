@@ -12,45 +12,44 @@ int n;
 
 int main()
 {
-    int i;
+	int i;
 
-    while(gets(s) != NULL){
-        len = strlen(s);
-        for(i = 0; i < len; ++i){
-            if(s[i] == '5'){
-                s[i] = ' ';
-            }
-        }
-        i = 0;
-        n = 0;
-        while(true){
-            if(i >= len){
-                break;
-            }
-            while(i < len && s[i] == ' '){
-                ++i;
-            }
-            if(i >= len){
-                break;
-            }
-            sscanf(s + i, "%d", &a[n]);
-            ++n;
-            while(i < len && s[i] != ' '){
-                ++i;
-            }
-        }
-        sort(a, a + n);
-        for(i = 0; i < n; ++i){
-            if(i == 0){
-                printf("%d", a[i]);
-            }else{
-                printf(" %d", a[i]);
+	while(gets(s) != NULL){
+		len = strlen(s);
+		for(i = 0; i < len; ++i){
+			if(s[i] == '5'){
+				s[i] = ' ';
+			}
+		}
+		i = 0;
+		n = 0;
+		while(true){
+			if(i >= len){
+				break;
+			}
+			while(i < len && s[i] == ' '){
+				++i;
+			}
+			if(i >= len){
+				break;
+			}
+			sscanf(s + i, "%d", &a[n]);
+			++n;
+			while(i < len && s[i] != ' '){
+				++i;
+			}
+		}
+		sort(a, a + n);
+		for(i = 0; i < n; ++i){
+			if(i == 0){
+				printf("%d", a[i]);
+			}else{
+				printf(" %d", a[i]);
 
-            }
-        }
-        printf("\n");
-    }
+			}
+		}
+		printf("\n");
+	}
 
-    return 0;
+	return 0;
 }
-

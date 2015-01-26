@@ -37,7 +37,7 @@ void TUnion(int x, int y){
     fy = find(y);
     if(fx == fy){
         flag = ans[x]^ans[y];
-    }else{
+	}else{
         tree[fx] = fy;
         ans[fx]= ~(ans[x] ^ ans[y]);
     }
@@ -45,8 +45,8 @@ void TUnion(int x, int y){
 
 int main(){
     int i;
-    int t, ti;
-    int a, b;
+	int t, ti;
+	int a, b;
 
     scanf("%d",&t);
     for(ti = 1; ti <= t; ++ti){
@@ -62,12 +62,11 @@ int main(){
         printf("Scenario #%d:\n", ti);
         if(flag){
             printf("No suspicious bugs found!\n\n");
-        }
+		}
         else{
             printf("Suspicious bugs found!\n\n");
-        }
+		}
     }
 
     return 0;
 }
-

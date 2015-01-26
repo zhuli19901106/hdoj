@@ -5,16 +5,15 @@ using namespace std;
 
 int main()
 {
-    int a, b;
-    
-    while(true){
-        if(scanf("%d%d", &a, &b) != 2){
-            break;
-        }else{
-            printf("%d\n", a + b);
-        }
-    }
-    
-    return 0;
+	int a, b;
+	
+	while(true){
+		if(scanf("%d%d", &a, &b) != 2){
+			break;
+		}else{
+			printf("%d\n", a + b);
+		}
+	}
+	
+	return 0;
 }
-

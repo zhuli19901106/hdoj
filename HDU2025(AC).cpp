@@ -11,24 +11,23 @@ char maxc;
 
 int main()
 {
-    int i;
+	int i;
 
-    while(gets(s) != NULL){
-        maxc = s[0];
-        for(i = 1; s[i]; ++i){
-            if(s[i] > maxc){
-                maxc = s[i];
-            }
-        }
-        for(i = 0; s[i]; ++i){
-            putchar(s[i]);
-            if(s[i] == maxc){
-                printf("(max)");
-            }
-        }
-        putchar('\n');
-    }
+	while(gets(s) != NULL){
+		maxc = s[0];
+		for(i = 1; s[i]; ++i){
+			if(s[i] > maxc){
+				maxc = s[i];
+			}
+		}
+		for(i = 0; s[i]; ++i){
+			putchar(s[i]);
+			if(s[i] == maxc){
+				printf("(max)");
+			}
+		}
+		putchar('\n');
+	}
 
-    return 0;
+	return 0;
 }
-

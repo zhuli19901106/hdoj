@@ -11,50 +11,49 @@ int n;
 
 inline int low_bit(const int &x)
 {
-    return x & (-x);
+	return x & (-x);
 }
 
 void add_value(int i, int v)
 {
-    while(i < MAXN){
-        c[i] += v;
-        i += low_bit(i);
-    }
+	while(i < MAXN){
+		c[i] += v;
+		i += low_bit(i);
+	}
 }
 
 int get_sum(int i)
 {
-    int sum;
+	int sum;
 
-    sum = 0;
-    while(i > 0){
-        sum += c[i];
-        i -= low_bit(i);
-    }
+	sum = 0;
+	while(i > 0){
+		sum += c[i];
+		i -= low_bit(i);
+	}
 
-    return sum;
+	return sum;
 }
 
 int main()
 {
-    int i;
-    int x, y;
+	int i;
+	int x, y;
 
-    while(scanf("%d", &n) == 1){
-        memset(lv, 0, MAXN * sizeof(int));
-        memset(c, 0, MAXN * sizeof(int));
-        for(i = 1; i <= n; ++i){
-            scanf("%d%d", &x, &y);
-            ++x;
-            ++y;
-            add_value(x, 1);
-            ++lv[get_sum(x)];
-        }
-        for(i = 1; i <= n; ++i){
-            printf("%d\n", lv[i]);
-        }
-    }
+	while(scanf("%d", &n) == 1){
+		memset(lv, 0, MAXN * sizeof(int));
+		memset(c, 0, MAXN * sizeof(int));
+		for(i = 1; i <= n; ++i){
+			scanf("%d%d", &x, &y);
+			++x;
+			++y;
+			add_value(x, 1);
+			++lv[get_sum(x)];
+		}
+		for(i = 1; i <= n; ++i){
+			printf("%d\n", lv[i]);
+		}
+	}
 
-    return 0;
+	return 0;
 }
-

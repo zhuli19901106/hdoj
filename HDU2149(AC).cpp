@@ -4,28 +4,25 @@
 #include <cstdlib>
 using namespace std;
 
-__int64 a[3];
-
 int main()
 {
-    int n, m;
-    int i;
+	int n, m;
+	int i;
 
-    while(scanf("%d%d", &m, &n) == 2){
-        if(m < n + 1){
-            i = (m > 1 ? m : 1);
-            printf("%d", i);
-            for(++i; i <= n; ++i){
-                printf(" %d", i);
-            }
-            printf("\n");
-        }else if(m % (n + 1) == 0){
-            printf("none\n");
-        }else{
-            printf("%d\n", m % (n + 1));
-        }
-    }
+	while(scanf("%d%d", &m, &n) == 2){
+		if(m < n + 1){
+			i = (m > 1 ? m : 1);
+			printf("%d", i);
+			for(++i; i <= n; ++i){
+				printf(" %d", i);
+			}
+			printf("\n");
+		}else if(m % (n + 1) == 0){
+			printf("none\n");
+		}else{
+			printf("%d\n", m % (n + 1));
+		}
+	}
 
-    return 0;
+	return 0;
 }
-

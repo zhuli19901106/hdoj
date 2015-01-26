@@ -5,18 +5,17 @@ using namespace std;
 
 int main()
 {
-    char s[2000];
-    int i;
+	char s[2000];
+	int i;
 
-    while(gets(s) != NULL){
-        for(i = 0; s[i]; ++i){
-            if(s[i] >= 'A' && s[i] <= 'Z'){
-                s[i] = s[i] - 'A' + 'a';
-            }
-        }
-        puts(s);
-    }
+	while(gets(s) != NULL){
+		for(i = 0; s[i]; ++i){
+			if(s[i] >= 'A' && s[i] <= 'Z'){
+				s[i] = s[i] - 'A' + 'a';
+			}
+		}
+		puts(s);
+	}
 
-    return 0;
+	return 0;
 }
-

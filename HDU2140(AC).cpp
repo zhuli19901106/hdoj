@@ -9,28 +9,27 @@ char s[11000];
 
 int main()
 {
-    int i;
-    
-    for(i = 0; i < 256; ++i){
-        a[i] = i;
-    }
-    a['b'] = ' ';
-    a['q'] = ',';
-    a['t'] = '!';
-    a['m'] = 'l';
-    a['i'] = 'e';
-    a['c'] = 'a';
-    a['a'] = 'c';
-    a['e'] = 'i';
-    a['l'] = 'm';
+	int i;
+	
+	for(i = 0; i < 256; ++i){
+		a[i] = i;
+	}
+	a['b'] = ' ';
+	a['q'] = ',';
+	a['t'] = '!';
+	a['m'] = 'l';
+	a['i'] = 'e';
+	a['c'] = 'a';
+	a['a'] = 'c';
+	a['e'] = 'i';
+	a['l'] = 'm';
 
-    while(gets(s) != NULL){
-        for(i = 0; s[i]; ++i){
-            putchar(a[s[i]]);
-        }
-        putchar('\n');
-    }
+	while(gets(s) != NULL){
+		for(i = 0; s[i]; ++i){
+			putchar(a[s[i]]);
+		}
+		putchar('\n');
+	}
 
-    return 0;
+	return 0;
 }
-

@@ -10,33 +10,32 @@ int ll, rr;
 
 int main()
 {
-    int i;
+	int i;
 
-    while(scanf("%d", &n) == 1){
-        for(i = 0; i < n; ++i){
-            scanf("%d", &a[i]);
-        }
-        sort(a, a + n);
-        ll = 0;
-        rr = n - 1;
-        printf("%d", a[n - 1]);
-        ll = 0;
-        rr = n - 2;
-        while(true){
-            if(ll > rr){
-                break;
-            }
-            printf(" %d", a[ll]);
-            ++ll;
-            if(ll > rr){
-                break;
-            }
-            printf(" %d", a[rr]);
-            --rr;
-        }
-        printf("\n");
-    }
+	while(scanf("%d", &n) == 1){
+		for(i = 0; i < n; ++i){
+			scanf("%d", &a[i]);
+		}
+		sort(a, a + n);
+		ll = 0;
+		rr = n - 1;
+		printf("%d", a[n - 1]);
+		ll = 0;
+		rr = n - 2;
+		while(true){
+			if(ll > rr){
+				break;
+			}
+			printf(" %d", a[ll]);
+			++ll;
+			if(ll > rr){
+				break;
+			}
+			printf(" %d", a[rr]);
+			--rr;
+		}
+		printf("\n");
+	}
 
-    return 0;
+	return 0;
 }
-

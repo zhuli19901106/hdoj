@@ -11,10 +11,9 @@ double rad;
 
 int main()
 {
-    while(scanf("%lf", &rad) == 1){
-        printf("%.3f\n", 4 * pi / 3 * rad * rad * rad);
-    }
+	while(scanf("%lf", &rad) == 1){
+		printf("%.3f\n", 4 * pi / 3 * rad * rad * rad);
+	}
 
-    return 0;
+	return 0;
 }
-

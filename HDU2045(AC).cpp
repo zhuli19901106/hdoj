@@ -9,17 +9,16 @@ int n;
 
 int main()
 {
-    res[1] = 3;
-    res[2] = 6;
-    res[3] = 6;
-    for(n = 4; n <= 50; ++n){
-        res[n] = 2 * res[n - 2] + res[n - 1];
-    }
-    
-    while(scanf("%d", &n) == 1){
-        printf("%I64d\n", res[n]);
-    }
+	res[1] = 3;
+	res[2] = 6;
+	res[3] = 6;
+	for(n = 4; n <= 50; ++n){
+		res[n] = 2 * res[n - 2] + res[n - 1];
+	}
+	
+	while(scanf("%d", &n) == 1){
+		printf("%I64d\n", res[n]);
+	}
 
-    return 0;
+	return 0;
 }
-

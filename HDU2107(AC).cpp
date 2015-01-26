@@ -8,20 +8,19 @@ int n, res, tmp;
 
 int main()
 {
-    int i;
+	int i;
 
-    while(scanf("%d", &n) == 1 && n){
-        scanf("%d", &res);
-        for(i = 1; i < n; ++i){
-            scanf("%d", &tmp);
-            if(tmp > res){
-                res = tmp;
-            }
-        }
+	while(scanf("%d", &n) == 1 && n){
+		scanf("%d", &res);
+		for(i = 1; i < n; ++i){
+			scanf("%d", &tmp);
+			if(tmp > res){
+				res = tmp;
+			}
+		}
 
-        printf("%d\n", res);
-    }
+		printf("%d\n", res);
+	}
 
-    return 0;
+	return 0;
 }
-

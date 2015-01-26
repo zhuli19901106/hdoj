@@ -9,17 +9,16 @@ int a, b;
 
 int main()
 {
-    int i, len;
+	int i, len;
 
-    while(scanf("%s%d", s, &b) == 2){
-        len = strlen(s);
-        a = 0;
-        for(i = 0; s[i]; ++i){
-            a = (a * 10 + (s[i] - '0')) % b;
-        }
-        printf("%d\n", a);
-    }
+	while(scanf("%s%d", s, &b) == 2){
+		len = strlen(s);
+		a = 0;
+		for(i = 0; s[i]; ++i){
+			a = (a * 10 + (s[i] - '0')) % b;
+		}
+		printf("%d\n", a);
+	}
 
-    return 0;
+	return 0;
 }
-

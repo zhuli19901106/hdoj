@@ -8,24 +8,23 @@ using namespace std;
 
 int main()
 {
-    char s[1000];
-    int n, ni, i;
-    int res;
+	char s[1000];
+	int n, ni, i;
+	int res;
 
-    while(gets(s) != NULL){
-        sscanf(s, "%d", &n);
-        for(ni = 0; ni < n; ++ni){
-            gets(s);
-            res = 0;
-            for(i = 0; s[i]; ++i){
-                if(s[i] >= '0' && s[i] <= '9'){
-                    ++res;
-                }
-            }
-            printf("%d\n", res);
-        }
-    }
+	while(gets(s) != NULL){
+		sscanf(s, "%d", &n);
+		for(ni = 0; ni < n; ++ni){
+			gets(s);
+			res = 0;
+			for(i = 0; s[i]; ++i){
+				if(s[i] >= '0' && s[i] <= '9'){
+					++res;
+				}
+			}
+			printf("%d\n", res);
+		}
+	}
 
-    return 0;
+	return 0;
 }
-

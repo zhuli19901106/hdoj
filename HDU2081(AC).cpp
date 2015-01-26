@@ -6,15 +6,14 @@ using namespace std;
 char s[100];
 int main()
 {
-    int t, ti;
+	int t, ti;
 
-    while(scanf("%d", &t) == 1){
-        for(ti = 0; ti < t; ++ti){
-            scanf("%s", s);
-            printf("6%s\n", s + 6);
-        }
-    }
+	while(scanf("%d", &t) == 1){
+		for(ti = 0; ti < t; ++ti){
+			scanf("%s", s);
+			printf("6%s\n", s + 6);
+		}
+	}
 
-    return 0;
+	return 0;
 }
-

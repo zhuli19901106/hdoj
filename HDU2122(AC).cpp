@@ -6,14 +6,14 @@
 using namespace std;
 
 typedef struct st{
-    int a;
-    int b;
-    int c;
+	int a;
+	int b;
+	int c;
 }st;
 
 bool comparator(const st &x, const st &y)
 {
-    return x.c < y.c;
+	return x.c < y.c;
 }
 
 vector<st> v;
@@ -23,72 +23,71 @@ int dj[1005];
 
 int find_root(int x)
 {
-    int r, k;
+	int r, k;
 
-    r = x;
-    while(dj[r] != r){
-        r = dj[r];
-    }
+	r = x;
+	while(dj[r] != r){
+		r = dj[r];
+	}
 
-    k = x;
-    while(x != r){
-        x = dj[x];
-        dj[k] = r;
-        k = x;
-    }
+	k = x;
+	while(x != r){
+		x = dj[x];
+		dj[k] = r;
+		k = x;
+	}
 
-    return r;
+	return r;
 }
 
 int main()
 {
-    int i;
-    int cc;
-    int ra, rb;
-    st tmp;
+	int i;
+	int cc;
+	int ra, rb;
+	st tmp;
 
-    while(scanf("%d%d", &n, &m) == 2){
-        v.clear();
+	while(scanf("%d%d", &n, &m) == 2){
+		v.clear();
 
-        for(i = 0; i < m; ++i){
-            scanf("%d%d%d", &tmp.a, &tmp.b, &tmp.c);
-            v.push_back(tmp);
-        }
-        if(n == 1){
-            printf("0\n\n");
-            continue;
-        }
-        sort(v.begin(), v.end(), comparator);
+		for(i = 0; i < m; ++i){
+			scanf("%d%d%d", &tmp.a, &tmp.b, &tmp.c);
+			v.push_back(tmp);
+		}
+		if(n == 1){
+			printf("0\n\n");
+			continue;
+		}
+		sort(v.begin(), v.end(), comparator);
 
-        cc = 0;
-        res = 0;
+		cc = 0;
+		res = 0;
 
-        for(i = 0; i < n; ++i){
-            dj[i] = i;
-        }
+		for(i = 0; i < n; ++i){
+			dj[i] = i;
+		}
 
-        for(i = 0; i < m; ++i){
-            ra = find_root(v[i].a);
-            rb = find_root(v[i].b);
-            if(ra != rb){
-                dj[ra] = rb;
-                res += v[i].c;
-                find_root(v[i].a);
-                find_root(v[i].b);
-                ++cc;
-            }
-            if(cc >= n - 1){
-                break;
-            }
-        }
+		for(i = 0; i < m; ++i){
+			ra = find_root(v[i].a);
+			rb = find_root(v[i].b);
+			if(ra != rb){
+				dj[ra] = rb;
+				res += v[i].c;
+				find_root(v[i].a);
+				find_root(v[i].b);
+				++cc;
+			}
+			if(cc >= n - 1){
+				break;
+			}
+		}
 
-        if(cc >= n - 1){
-            printf("%d\n\n", res);
-        }else{
-            printf("impossible\n\n");
-        }
-    }
+		if(cc >= n - 1){
+			printf("%d\n\n", res);
+		}else{
+			printf("impossible\n\n");
+		}
+	}
 
-    return 0;
+	return 0;
 }
-

@@ -12,20 +12,19 @@ int res;
 
 int main()
 {
-    int i, tmp;
+	int i, tmp;
 
-    while(scanf("%d", &n) == 1){
-        res = 1;
-        for(i = 0; i < n; ++i){
-            scanf("%d", &tmp);
-            if(tmp % 2){
-                res = res * tmp;
-            }
-        }
+	while(scanf("%d", &n) == 1){
+		res = 1;
+		for(i = 0; i < n; ++i){
+			scanf("%d", &tmp);
+			if(tmp % 2){
+				res = res * tmp;
+			}
+		}
 
-        printf("%d\n", res);
-    }
+		printf("%d\n", res);
+	}
 
-    return 0;
+	return 0;
 }
-

@@ -13,49 +13,48 @@ int res;
 
 int main()
 {
-    int i, j;
-    int tmp;
-    int ti;
+	int i, j;
+	int tmp;
+	int ti;
 
-    ti = 0;
-    while(scanf("%d%d", &m, &n) == 2 && (m || n)){
-        ++ti;
-        memset(f, 0, 1001 * sizeof(int));
-        for(i = 0; i < n; ++i){
-            scanf("%d", &tmp);
-            a[i] = tmp;
-            f[tmp] = 1;
-        }
+	ti = 0;
+	while(scanf("%d%d", &m, &n) == 2 && (m || n)){
+		++ti;
+		memset(f, 0, 1001 * sizeof(int));
+		for(i = 0; i < n; ++i){
+			scanf("%d", &tmp);
+			a[i] = tmp;
+			f[tmp] = 1;
+		}
 
-        j = 0;
-        for(i = n * m; i >= 1; --i){
-            if(!f[i]){
-                f[i] = 1;
-                b[j++] = i;
-                if(j == n){
-                    break;
-                }
-            }
-        }
+		j = 0;
+		for(i = n * m; i >= 1; --i){
+			if(!f[i]){
+				f[i] = 1;
+				b[j++] = i;
+				if(j == n){
+					break;
+				}
+			}
+		}
 
-        sort(a, a + n);
-        sort(b, b + n);
+		sort(a, a + n);
+		sort(b, b + n);
 
-        res = n;
-        memset(ub, 0, 55 * sizeof(int));
-        for(i = n - 1; i >= 0; --i){
-            for(j = 0; j < n; ++j){
-                if(!ub[j] && b[j] > a[i]){
-                    ub[j] = 1;
-                    --res;
-                    break;
-                }
-            }
-        }
+		res = n;
+		memset(ub, 0, 55 * sizeof(int));
+		for(i = n - 1; i >= 0; --i){
+			for(j = 0; j < n; ++j){
+				if(!ub[j] && b[j] > a[i]){
+					ub[j] = 1;
+					--res;
+					break;
+				}
+			}
+		}
 
-        printf("Case %d: %d\n", ti, res);
-    }
+		printf("Case %d: %d\n", ti, res);
+	}
 
-    return 0;
+	return 0;
 }
-

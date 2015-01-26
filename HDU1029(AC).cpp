@@ -9,28 +9,27 @@ int cc;
 
 int main()
 {
-    int i;
+	int i;
 
-    while(scanf("%d", &n) == 1){
-        scanf("%d", &res);
-        cc = 1;
+	while(scanf("%d", &n) == 1){
+		scanf("%d", &res);
+		cc = 1;
 
-        for(i = 1; i < n; ++i){
-            scanf("%d", &tmp);
-            if(tmp != res){
-                --cc;
-                if(cc == 0){
-                    res = tmp;
-                    cc = 1;
-                }
-            }else{
-                ++cc;
-            }
-        }
+		for(i = 1; i < n; ++i){
+			scanf("%d", &tmp);
+			if(tmp != res){
+				--cc;
+				if(cc == 0){
+					res = tmp;
+					cc = 1;
+				}
+			}else{
+				++cc;
+			}
+		}
 
-        printf("%d\n", res);
-    }
+		printf("%d\n", res);
+	}
 
-    return 0;
+	return 0;
 }
-

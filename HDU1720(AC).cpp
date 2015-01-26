@@ -8,10 +8,9 @@ int a, b;
 
 int main()
 {
-    while(scanf("%x%x", &a, &b) == 2){
-        printf("%d\n", a + b);
-    }
+	while(scanf("%x%x", &a, &b) == 2){
+		printf("%d\n", a + b);
+	}
 
-    return 0;
+	return 0;
 }
-

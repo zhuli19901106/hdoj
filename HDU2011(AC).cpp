@@ -11,22 +11,21 @@ int m, flag;
 
 int main()
 {
-    int n, ni;
-    int i;
+	int n, ni;
+	int i;
 
-    while(scanf("%d", &n) == 1){
-        for(ni = 0; ni < n; ++ni){
-            scanf("%d", &m);
-            sum = 0;
-            flag = 1;
-            for(i = 1; i <= m; ++i){
-                sum += (flag * 1.0 / i);
-                flag = -flag;
-            }
-            printf("%.2f\n", sum);
-        }
-    }
+	while(scanf("%d", &n) == 1){
+		for(ni = 0; ni < n; ++ni){
+			scanf("%d", &m);
+			sum = 0;
+			flag = 1;
+			for(i = 1; i <= m; ++i){
+				sum += (flag * 1.0 / i);
+				flag = -flag;
+			}
+			printf("%.2f\n", sum);
+		}
+	}
 
-    return 0;
+	return 0;
 }
-

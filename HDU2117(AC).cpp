@@ -7,17 +7,16 @@ int n, m, res;
 
 int main()
 {
-    int i;
+	int i;
 
-    while(scanf("%d%d", &n, &m) == 2){
-        res = 1;
-        for(i = 0; i < m - 1; ++i){
-            res = res * 10 % n;
-        }
-        res = res * 10 / n % 10;
-        printf("%d\n", res);
-    }
+	while(scanf("%d%d", &n, &m) == 2){
+		res = 1;
+		for(i = 0; i < m - 1; ++i){
+			res = res * 10 % n;
+		}
+		res = res * 10 / n % 10;
+		printf("%d\n", res);
+	}
 
-    return 0;
+	return 0;
 }
-

@@ -11,30 +11,29 @@ int a[105];
 
 int myabs(const int &a)
 {
-    return (a > 0 ? a : -a);
+	return (a > 0 ? a : -a);
 }
 
 bool comparator(int a, int b)
 {
-    return myabs(a) > myabs(b);
+	return myabs(a) > myabs(b);
 }
 
 int main()
 {
-    int i;
+	int i;
 
-    while(scanf("%d", &n) == 1 && n){
-        for(i = 0; i < n; ++i){
-            scanf("%d", &a[i]);
-        }
-        sort(a, a + n, comparator);
-        
-        for(i = 0; i < n; ++i){
-            printf((i ? " %d" : "%d"), a[i]);
-        }
-        printf("\n");
-    }
+	while(scanf("%d", &n) == 1 && n){
+		for(i = 0; i < n; ++i){
+			scanf("%d", &a[i]);
+		}
+		sort(a, a + n, comparator);
+		
+		for(i = 0; i < n; ++i){
+			printf((i ? " %d" : "%d"), a[i]);
+		}
+		printf("\n");
+	}
 
-    return 0;
+	return 0;
 }
-

@@ -6,12 +6,11 @@ using namespace std;
 
 int main()
 {
-    int n;
+	int n;
 
-    while(scanf("%d", &n) == 1){
-        printf("%.0f\n", 1.0 + (n - 2) * pow(2.0, n - 1));
-    }
+	while(scanf("%d", &n) == 1){
+		printf("%.0f\n", 1.0 + (n - 2) * pow(2.0, n - 1));
+	}
 
-    return 0;
+	return 0;
 }
-

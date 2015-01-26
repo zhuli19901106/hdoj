@@ -14,59 +14,58 @@ int num;
 
 int main()
 {
-    int sum;
-    int t, ti;
-    int i, j;
-    int p, q;
+	int sum;
+	int t, ti;
+	int i, j;
+	int p, q;
 
-    while(scanf("%d", &t) == 1){
-        for(ti = 0; ti < t; ++ti){
-            memset(f, 0, 40 * 40 * 500 * sizeof(int));
-            scanf("%d%d", &n, &m);
-            for(i = 1; i <= n; ++i){
-                scanf("%d", &a[i]);
-            }
-            sort(&a[1], &a[n + 1]);
+	while(scanf("%d", &t) == 1){
+		for(ti = 0; ti < t; ++ti){
+			memset(f, 0, 40 * 40 * 500 * sizeof(int));
+			scanf("%d%d", &n, &m);
+			for(i = 1; i <= n; ++i){
+				scanf("%d", &a[i]);
+			}
+			sort(&a[1], &a[n + 1]);
 
-            sum = 0;
-            for(i = 1; i <= n; ++i){
-                sum += a[i];
-                if(sum > m){
-                    break;
-                }
-            }
-            num = i - 1;
-            if(num == 0){
-                printf("Sorry, you can't buy anything.\n");
-                continue;
-            }
+			sum = 0;
+			for(i = 1; i <= n; ++i){
+				sum += a[i];
+				if(sum > m){
+					break;
+				}
+			}
+			num = i - 1;
+			if(num == 0){
+				printf("Sorry, you can't buy anything.\n");
+				continue;
+			}
 
-            for(i = 1; i <= n; ++i){
-                f[i][1][a[i]] = 1;
-            }
-            for(j = 2; j <= num; ++j){
-                for(i = j; i <= n; ++i){
-                    for(p = j - 1; p <= i - 1; ++p){
-                        for(q = 0; q <= m - a[i]; ++q){
-                            if(f[p][j - 1][q] > 0){
-                                f[i][j][q + a[i]] += f[p][j - 1][q];
-                            }
-                        }
-                    }
-                }
-            }
+			for(i = 1; i <= n; ++i){
+				f[i][1][a[i]] = 1;
+			}
+			for(j = 2; j <= num; ++j){
+				for(i = j; i <= n; ++i){
+					for(p = j - 1; p <= i - 1; ++p){
+						for(q = 0; q <= m - a[i]; ++q){
+							if(f[p][j - 1][q] > 0){
+								f[i][j][q + a[i]] += f[p][j - 1][q];
+							}
+						}
+					}
+				}
+			}
 
-            res = 0;
-            for(q = 0; q <= m; ++q){
-                for(j = num; j <= n; ++j){
-                    res += f[j][num][q];
-                }
-            }
+			res = 0;
+			for(q = 0; q <= m; ++q){
+				for(j = num; j <= n; ++j){
+					res += f[j][num][q];
+				}
+			}
 
-            printf("You have %d selection(s) to buy with %d kind(s) of souvenirs.\n", res, num);
-        }
-    }
+			printf("You have %d selection(s) to buy with %d kind(s) of souvenirs.\n", res, num);
+		}
+	}
 
-    return 0;
+	return 0;
 }
-

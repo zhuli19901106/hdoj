@@ -7,19 +7,18 @@ int a, b;
 
 int main()
 {
-    int i;
-    int count;
+	int i;
+	int count;
 
-    while(scanf("%d%d", &a, &b) == 2 && (a || b)){
-        count = 0;
-        for(i = 0; i < 100; ++i){
-            if(!((a * 100 + i) % b)){
-                printf((count++ ? " %02d" : "%02d"), i);
-            }
-        }
-        printf("\n");
-    }
+	while(scanf("%d%d", &a, &b) == 2 && (a || b)){
+		count = 0;
+		for(i = 0; i < 100; ++i){
+			if(!((a * 100 + i) % b)){
+				printf((count++ ? " %02d" : "%02d"), i);
+			}
+		}
+		printf("\n");
+	}
 
-    return 0;
+	return 0;
 }
-

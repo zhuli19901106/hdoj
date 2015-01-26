@@ -1,29 +1,30 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include <cmath>
-#include <cstdio>
-using namespace std;
+#include <stdio.h>
 
 int main()
 {
-    int res, sec, tt, i;
-    double v, d;
+	int res, i;
+	double v, d, s;
 
-    while(scanf("%lf%lf", &v, &d) == 2){
-		sec = (int)ceil(v / d);
-		tt = 0;
+	while(scanf("%lf%lf", &v, &d) == 2){
+		s = 0;
 		res = 0;
-		for (i = 1; ; ++i) {
-			tt += i;
-			if (tt >= sec) {
-				res += (sec - (tt - i));
+		for(i = 1; ; ++i){
+			s += i * d;
+			res += i;
+			++res;
+			if(v - s <= (i + 1) * d){
+				if((v - s) / d == (int)((v - s) / d)){
+					res += (v - s) / d;
+				}else{
+					res += (v - s) / d + 1;
+				}
 				break;
-			} else {
-				res += i;
-				++res;
 			}
 		}
-        printf("%d\n", res);
-    }
 
-    return 0;
+		printf("%d\n", res);
+	}
+
+	return 0;
 }

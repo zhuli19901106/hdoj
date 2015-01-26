@@ -15,33 +15,32 @@ int x, y;
 
 int main()
 {
-    char s[1000];
-    int i;
+	char s[1000];
+	int i;
 
-    while(scanf("%s", s) == 1){
-        printf("300 420 moveto\n");
-        printf("310 420 lineto\n");
+	while(scanf("%s", s) == 1){
+		printf("300 420 moveto\n");
+		printf("310 420 lineto\n");
 
-        x = 310;
-        y = 420;
-        dir = E;
-        for(i = 0; s[i]; ++i){
-            if(s[i] == 'V'){
-                dir = v[dir];
-                x = x + d[dir][0];
-                y = y + d[dir][1];
-                printf("%d %d lineto\n", x, y);
-            }else if(s[i] == 'A'){
-                dir = a[dir];
-                x = x + d[dir][0];
-                y = y + d[dir][1];
-                printf("%d %d lineto\n", x, y);
-            }
-        }
+		x = 310;
+		y = 420;
+		dir = E;
+		for(i = 0; s[i]; ++i){
+			if(s[i] == 'V'){
+				dir = v[dir];
+				x = x + d[dir][0];
+				y = y + d[dir][1];
+				printf("%d %d lineto\n", x, y);
+			}else if(s[i] == 'A'){
+				dir = a[dir];
+				x = x + d[dir][0];
+				y = y + d[dir][1];
+				printf("%d %d lineto\n", x, y);
+			}
+		}
 
-        printf("stroke\nshowpage\n");
-    }
+		printf("stroke\nshowpage\n");
+	}
 
-    return 0;
+	return 0;
 }
-

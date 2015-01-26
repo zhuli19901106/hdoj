@@ -8,19 +8,18 @@ int a[100001];
 
 int main()
 {
-    int i, j;
+	int i, j;
 
-    memset(a, 0, 100001 * sizeof(int));
-    for(i = 1; i <= 100000; ++i){
-        for(j = 1; 100000 / j >= i; ++j){
-            a[i * j] = !a[i * j];
-        }
-    }
+	memset(a, 0, 100001 * sizeof(int));
+	for(i = 1; i <= 100000; ++i){
+		for(j = 1; 100000 / j >= i; ++j){
+			a[i * j] = !a[i * j];
+		}
+	}
 
-    while(scanf("%d", &i) == 1){
-        printf("%d\n", a[i]);
-    }
+	while(scanf("%d", &i) == 1){
+		printf("%d\n", a[i]);
+	}
 
-    return 0;
+	return 0;
 }
-

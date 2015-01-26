@@ -6,12 +6,11 @@ using namespace std;
 
 int main()
 {
-    double r;
+	double r;
 
-    while(scanf("%lf", &r) == 1 && r != 0.0){
-        printf("%.3f %.3f\n", r * sqrt(1.0 / 3.0), r * sqrt(2.0 / 3.0));
-    }
+	while(scanf("%lf", &r) == 1 && r != 0.0){
+		printf("%.3f %.3f\n", r * sqrt(1.0 / 3.0), r * sqrt(2.0 / 3.0));
+	}
 
-    return 0;
+	return 0;
 }
-

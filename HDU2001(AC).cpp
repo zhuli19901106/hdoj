@@ -10,10 +10,9 @@ double xx1, yy1, xx2, yy2;
 
 int main()
 {
-    while(scanf("%lf%lf%lf%lf", &xx1, &yy1, &xx2, &yy2) == 4){
-        printf("%.2f\n", sqrt((xx1 - xx2) * (xx1 - xx2) + (yy1 - yy2) * (yy1 - yy2)));
-    }
+	while(scanf("%lf%lf%lf%lf", &xx1, &yy1, &xx2, &yy2) == 4){
+		printf("%.2f\n", sqrt((xx1 - xx2) * (xx1 - xx2) + (yy1 - yy2) * (yy1 - yy2)));
+	}
 
-    return 0;
+	return 0;
 }
-

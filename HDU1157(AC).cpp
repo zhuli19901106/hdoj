@@ -9,16 +9,15 @@ int n;
 
 int main()
 {
-    int i;
+	int i;
 
-    while(scanf("%d", &n) == 1){
-        for(i = 0; i < n; ++i){
-            scanf("%d", &a[i]);
-        }
-        sort(a, a + n);
-        printf("%d\n", a[(n - 1) / 2]);
-    }
+	while(scanf("%d", &n) == 1){
+		for(i = 0; i < n; ++i){
+			scanf("%d", &a[i]);
+		}
+		sort(a, a + n);
+		printf("%d\n", a[(n - 1) / 2]);
+	}
 
-    return 0;
+	return 0;
 }
-

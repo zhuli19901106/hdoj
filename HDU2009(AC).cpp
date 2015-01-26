@@ -11,18 +11,17 @@ int n, m;
 
 int main()
 {
-    int i;
+	int i;
 
-    while(scanf("%d%d", &n, &m) == 2){
-        sum = 0;
-        term = n;
-        for(i = 0; i < m; ++i){
-            sum += term;
-            term = sqrt(term);
-        }
-        printf("%.2f\n", sum);
-    }
+	while(scanf("%d%d", &n, &m) == 2){
+		sum = 0;
+		term = n;
+		for(i = 0; i < m; ++i){
+			sum += term;
+			term = sqrt(term);
+		}
+		printf("%.2f\n", sum);
+	}
 
-    return 0;
+	return 0;
 }
-

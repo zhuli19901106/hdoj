@@ -11,17 +11,16 @@ int n;
 
 int main()
 {
-    int i;
+	int i;
 
-    a[0] = 1;
-    for(i = 1; i <= 30; ++i){
-        a[i] = 2 * (a[i - 1] + 1);
-    }
+	a[0] = 1;
+	for(i = 1; i <= 30; ++i){
+		a[i] = 2 * (a[i - 1] + 1);
+	}
 
-    while(scanf("%d", &n) == 1){
-        printf("%I64d\n", a[n - 1]);
-    }
+	while(scanf("%d", &n) == 1){
+		printf("%I64d\n", a[n - 1]);
+	}
 
-    return 0;
+	return 0;
 }
-

@@ -4,20 +4,19 @@ using namespace std;
 
 int main()
 {
-    int res;
-    int m, k;
+	int res;
+	int m, k;
 
-    while(scanf("%d%d", &m, &k) == 2 && (m || k)){
-        res = 0;
-        while(m >= k){
-            res += (m / k * k);
-            m = (m % k) + (m / k);
-        }
-        res += m;
+	while(scanf("%d%d", &m, &k) == 2 && (m || k)){
+		res = 0;
+		while(m >= k){
+			res += (m / k * k);
+			m = (m % k) + (m / k);
+		}
+		res += m;
 
-        printf("%d\n", res);
-    }
+		printf("%d\n", res);
+	}
 
-    return 0;
+	return 0;
 }
-

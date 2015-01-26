@@ -10,19 +10,18 @@ int res, tmp;
 
 int main()
 {
-    int i;
+	int i;
 
-    while(scanf("%d%d", &n, &s) == 2){
-        scanf("%d", &res);
-        for(i = 1; i < n; ++i){
-            scanf("%d", &tmp);
-            if(tmp < res){
-                res = tmp;
-            }
-        }
-        printf("%d\n", s / res);
-    }
+	while(scanf("%d%d", &n, &s) == 2){
+		scanf("%d", &res);
+		for(i = 1; i < n; ++i){
+			scanf("%d", &tmp);
+			if(tmp < res){
+				res = tmp;
+			}
+		}
+		printf("%d\n", s / res);
+	}
 
-    return 0;
+	return 0;
 }
-
